@@ -1,86 +1,579 @@
-[About](#about) [Projects](#projects) [Skills](#skills) [Certifications](#certifications) [Education](#education) [Resume](#resume) [Contact](#contact)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-Photo of Gowshick S
+    <title>Gowshick S | Portfolio</title>
 
-# Hi, I'm Gowshick S.
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-Aspiring software engineer. I'm a first-year B.E. student in Computer Science and Design Engineering at SNS College of Technology, Coimbatore, building my skills in Python, Java and web development.
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 
-[See my certifications](#certifications) [Get in touch](#contact)
+    <style>
+        :root {
+            --bg: #f3f6f1;
+            --ink: #1b2a22;
+            --muted: #5a6b61;
+            --card: #ffffff;
+            --line: #d5ddd3;
+            --accent: #1f6f5c;
+            --accent-ink: #ffffff;
+            --chip: #e1ece6;
+        }
 
-## About me
+        * {
+            box-sizing: border-box;
+        }
 
-I'm a Computer Science and Design Engineering student who enjoys solving problems, debugging code and thinking critically about how to make things work better.
+        html {
+            scroll-behavior: smooth;
+        }
 
-I've built mini projects where leadership and teamwork played a big part, and I'm looking to grow through internships and hands-on software work.
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--ink);
+            font-family: "Hanken Grotesk", Arial, sans-serif;
+            line-height: 1.6;
+            font-size: 17px;
+        }
 
-## Projects
+        .wrap {
+            max-width: 860px;
+            margin: auto;
+            padding: 0 22px;
+        }
 
-### TransitIQ
+        nav {
+            display: flex;
+            gap: 20px;
+            justify-content: flex-end;
+            padding: 20px 0;
+            flex-wrap: wrap;
+        }
 
-Personal project
+        nav a {
+            color: var(--muted);
+            text-decoration: none;
+        }
 
-Full project description coming soon.
+        nav a:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
 
-[View on GitHub](https://github.com/GOWSHICKS31)
+        .hero {
+            padding: 48px 0 56px;
+        }
 
-## Skills
+        .hero-row {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+            flex-wrap: wrap-reverse;
+        }
 
-- Python
-- Java (basics)
-- MS Excel
-- Agentic AI
-- Debugging
-- Problem solving
-- Leadership
-- Communication
+        .hero-text {
+            flex: 1 1 360px;
+        }
 
-## Certifications
+        .photo {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top;
+            border: 4px solid var(--accent);
+        }
 
-### Enterprise Design Thinking Practitioner
+        h1 {
+            font-family: Fraunces, Georgia, serif;
+            font-size: clamp(2.4rem, 7vw, 4rem);
+            line-height: 1.05;
+            margin: 0 0 16px;
+        }
 
-IBM SkillsBuild | 17 Sep 2025
+        .lead {
+            font-size: 1.2rem;
+            color: var(--muted);
+            max-width: 56ch;
+            margin-bottom: 28px;
+        }
 
-Learned user-centered problem solving, empathy, ideation, prototyping and iterative testing to create scalable solutions, while building teamwork and an agile mindset.
+        .btns {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
 
-### Artificial Intelligence with Python (CS50)
+        .btn {
+            display: inline-block;
+            padding: 12px 22px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            border: 2px solid var(--accent);
+        }
 
-Cursa | 14 Feb 2026
+        .btn.primary {
+            background: var(--accent);
+            color: white;
+        }
 
-Hands-on experience with machine learning, search algorithms, optimization, neural networks and AI problem solving using Python.
+        .btn.ghost {
+            color: var(--accent);
+        }
 
-### Java
+        section {
+            padding: 40px 0;
+            border-top: 1px solid var(--line);
+        }
 
-Skillected
+        h2 {
+            font-family: Fraunces, Georgia, serif;
+            font-size: 1.9rem;
+            margin-bottom: 22px;
+        }
 
-Foundation in Java programming, supporting my B.E. coursework in software development.
+        .about p {
+            max-width: 62ch;
+            margin-bottom: 14px;
+        }
 
-## Education
+        .grid {
+            display: grid;
+            gap: 18px;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(250px, 1fr)
+            );
+        }
 
-### B.E. Computer Science and Design Engineering
+        .project {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 22px;
+        }
 
-SNS College of Technology | 2025 to 2029
+        .project h3 {
+            margin: 0 0 6px;
+            font-size: 1.2rem;
+        }
 
-Developing skills in Python, Java and web development, with a foundation in software development, problem solving and application design.
+        .project p {
+            color: var(--muted);
+            font-size: 0.98rem;
+        }
 
-### Higher Secondary Education
+        .tools {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
 
-SMSM Higher Secondary School | March 2025
+        .project a,
+        .contact a {
+            color: var(--accent);
+            font-weight: 600;
+        }
 
-Built a base in programming logic and core coding principles, including the basics of Python and C++.
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 0;
+            list-style: none;
+        }
 
-Languages: English, Tamil
+        .chips li {
+            background: var(--chip);
+            padding: 7px 14px;
+            border-radius: 999px;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
 
-## Resume
+        .resume-box {
+            max-width: 620px;
+        }
 
-Gowshick S resume
+        .resume-img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+        }
 
-## Contact
+        footer {
+            padding: 30px 0 40px;
+            color: var(--muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--line);
+        }
 
-Email: [gowshickg946@gmail.com](mailto:gowshickg946@gmail.com)
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #121a16;
+                --ink: #e8efea;
+                --muted: #9fb0a6;
+                --card: #1a2520;
+                --line: #2c3a33;
+                --accent: #5fc4a8;
+                --accent-ink: #0f1a15;
+                --chip: #23332c;
+            }
+        }
 
-LinkedIn: [linkedin.com/in/GOWSHICK](https://www.linkedin.com/in/GOWSHICK)
+        @media (max-width: 600px) {
+            nav {
+                justify-content: center;
+            }
 
-GitHub: [github.com/GOWSHICKS31](https://github.com/GOWSHICKS31)
+            .hero {
+                padding-top: 30px;
+            }
 
-© Gowshick S
+            .photo {
+                width: 140px;
+                height: 140px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="wrap">
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#education">Education</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+
+    <!-- HERO -->
+    <header class="hero">
+
+        <div class="hero-row">
+
+            <div class="hero-text">
+
+                <h1>
+                    Hi, I'm Gowshick S.
+                </h1>
+
+                <p class="lead">
+                    Aspiring software engineer. I'm a second-year
+                    B.E. student in Computer Science and Design
+                    Engineering at SNS College of Technology,
+                    Coimbatore, building my skills in Python,
+                    Java and web development.
+                </p>
+
+                <div class="btns">
+
+                    <a href="#projects" class="btn primary">
+                        View Projects
+                    </a>
+
+                    <a href="#contact" class="btn ghost">
+                        Get in touch
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Put your photo in the same folder and name it profile.jpg -->
+            <img
+                class="photo"
+                src="profile.jpg"
+                alt="Photo of Gowshick S"
+            >
+
+        </div>
+
+    </header>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+
+        <h2>About Me</h2>
+
+        <p>
+            I'm a Computer Science and Design Engineering student
+            who enjoys solving problems, debugging code and
+            thinking critically about how to make things work better.
+        </p>
+
+        <p>
+            I've built mini projects where leadership and teamwork
+            played a big part, and I'm looking to grow through
+            internships and hands-on software work.
+        </p>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section id="projects">
+
+        <h2>Projects</h2>
+
+        <div class="grid">
+
+            <div class="project">
+
+                <h3>TransitIQ</h3>
+
+                <p>
+                    AI-Powered Predictive Public Transport
+                    Intelligence system designed to improve
+                    public transportation monitoring and prediction.
+                </p>
+
+                <div class="tools">
+                    Python · AI · Web Development
+                </div>
+
+                <a
+                    href="https://github.com/GOWSHICKS31"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    View on GitHub
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+    <section id="skills">
+
+        <h2>Skills</h2>
+
+        <ul class="chips">
+
+            <li>Python</li>
+            <li>Java</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>MS Excel</li>
+            <li>Agentic AI</li>
+            <li>Debugging</li>
+            <li>Problem Solving</li>
+            <li>Leadership</li>
+            <li>Communication</li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications">
+
+        <h2>Certifications</h2>
+
+        <div class="grid">
+
+            <div class="project">
+
+                <h3>
+                    Enterprise Design Thinking Practitioner
+                </h3>
+
+                <p>
+                    IBM SkillsBuild
+                </p>
+
+                <p>
+                    17 September 2025
+                </p>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>
+                    Artificial Intelligence with Python
+                </h3>
+
+                <p>
+                    CS50 · Cursa
+                </p>
+
+                <p>
+                    14 February 2026
+                </p>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>
+                    Java
+                </h3>
+
+                <p>
+                    Skillected
+                </p>
+
+                <p>
+                    Foundation in Java programming.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+    <section id="education">
+
+        <h2>Education</h2>
+
+        <div class="project">
+
+            <h3>
+                B.E. Computer Science and Design Engineering
+            </h3>
+
+            <p>
+                SNS College of Technology
+            </p>
+
+            <p>
+                2025 – 2029
+            </p>
+
+            <p>
+                Developing skills in Python, Java and web
+                development, with a foundation in software
+                development, problem solving and application design.
+            </p>
+
+        </div>
+
+
+        <br>
+
+
+        <div class="project">
+
+            <h3>
+                Higher Secondary Education
+            </h3>
+
+            <p>
+                SMSM Higher Secondary School
+            </p>
+
+            <p>
+                March 2025
+            </p>
+
+        </div>
+
+
+        <br>
+
+
+        <div class="project">
+
+            <h3>Languages</h3>
+
+            <p>
+                English · Tamil
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESUME -->
+    <section id="resume">
+
+        <h2>Resume</h2>
+
+        <div class="resume-box">
+
+            <!-- Put your resume in the same folder and name it resume.jpg -->
+            <img
+                class="resume-img"
+                src="resume.jpg"
+                alt="Gowshick S Resume"
+            >
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+
+        <h2>Contact</h2>
+
+        <p>
+            Email:
+            <a href="mailto:gowshickg946@gmail.com">
+                gowshickg946@gmail.com
+            </a>
+        </p>
+
+        <p>
+            LinkedIn:
+            <a
+                href="https://www.linkedin.com/in/GOWSHICK"
+                target="_blank"
+                rel="noopener"
+            >
+                linkedin.com/in/GOWSHICK
+            </a>
+        </p>
+
+        <p>
+            GitHub:
+            <a
+                href="https://github.com/GOWSHICKS31"
+                target="_blank"
+                rel="noopener"
+            >
+                github.com/GOWSHICKS31
+            </a>
+        </p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        &copy; 2026 Gowshick S
+    </footer>
+
+</div>
+
+</body>
+</html>
